@@ -49,7 +49,7 @@ make4.1+ perl python3.6+ rsync subversion unzip which
    cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen
    applications for your target system.
    
-   a. It will send the ooutput of the make command to nohup.out if you want to `tail nohup.out` for status.
+   a. It will send the output of the make command to nohup.out if you want to `tail nohup.out` for status.
   
 7. Hit `CTRL+z` in order to run the make job in the background.
 
