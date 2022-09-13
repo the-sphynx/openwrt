@@ -38,13 +38,24 @@ make4.1+ perl python3.6+ rsync subversion unzip which
    packages into package/feeds/
    
    a. You may need to run `./scripts/feeds install libpam` if you see errors about it being missing
+3. Run  `cp diffconfig .confg` to select the proper items in menuconfig automatically.
 
-3. Run `make menuconfig` to select your preferred configuration for the
+4. Run `make defconfig` to import the diffconfig changes into the full blown .config file.
+
+5. Run `make menuconfig` to select your preferred configuration for the
    toolchain, target system & firmware packages.
 
-4. Run `make` to build your firmware. This will download all sources, build the
+6. Run `nohup make -j 2 world &` to build your firmware. This will download all sources, build the
    cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen
    applications for your target system.
+   
+   a. It will send the ooutput of the make command to nohup.out if you want to `tail nohup.out` for status.
+  
+7. Hit `CTRL+z` in order to run the make job in the background.
+
+8. Type `bg` to restart that process in the background
+
+9.  Type `jobs` to see the status of the background job.
 
 ### Related Repositories
 
