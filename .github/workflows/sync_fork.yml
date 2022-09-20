@@ -23,6 +23,7 @@ jobs:
         ref:  master
         # REQUIRED if your upstream repo is private (see wiki)
         persist-credentials: false
+        fetch-depth: 0
 
     # REQUIRED step
     # Step 2: run the sync action
@@ -39,6 +40,7 @@ jobs:
 
         # Set test_mode true to run tests instead of the true action!!
         test_mode: false
+        upstream_pull_args: '--allow-unrelated-histories'
       
     # Step 3: Display a sample message based on the sync output var 'has_new_commits'
     - name: New commits found
