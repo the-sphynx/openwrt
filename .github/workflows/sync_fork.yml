@@ -33,7 +33,7 @@ jobs:
         # REQUIRED 'target_repo_token' exactly like this!
         target_repo_token: ${{ secrets.GITHUB_TOKEN }}
         upstream_sync_branch: master
-        upstream_sync_repo: https://github.com/openwrt/openwrt
+        upstream_sync_repo: openwrt/openwrt
         # OPTIONAL
         #upstream_repo_access_token: ${{ secrets.UPSTREAM_REPO_SECRET }}
 
