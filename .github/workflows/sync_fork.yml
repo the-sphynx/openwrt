@@ -24,6 +24,7 @@ jobs:
         persist-credentials: false
         # REQUIRED 'target_repo_token' exactly like this!
         token: ${{ secrets.GITHUB_TOKEN }}
+        fetch_depth: 0
 
     # REQUIRED step
     # Step 2: run the sync action
@@ -38,6 +39,7 @@ jobs:
         upstream_sync_repo: openwrt/openwrt
         # OPTIONAL
         #upstream_repo_access_token: ${{ secrets.UPSTREAM_REPO_SECRET }}
+        upstream_pull_args: '--allow-unrelated-histories'
 
         # Set test_mode true to run tests instead of the true action!!
         test_mode: false
